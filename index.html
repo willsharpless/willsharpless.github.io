@@ -87,7 +87,7 @@
                 st_stop()
               </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
+            <td style="padding:20px;width:75%;vertical-align:middle">
               <heading>Environmental Control of Microbiomes</heading>
               <br> Parameter-varying, Lotka Volterra modeling
               <br>
@@ -97,7 +97,7 @@
               <a href="https://youtube.come">Grant Presentation FIX</a> /
               <a href="data/data_will/SPUR_Presentation_Sharpless_111020.pdf"> Ppt pdf</a>
               <p></p>
-              <p>In this work, I have set out to interrogate the dependence of microbial interactions and growth rates (gLV parameters) on physical and molecular environmental gradients, and thereby, the dependence of community dynamics on the gradients as well. I aim to validate the research by designing an MPC that dictates what temperature and glucose concentration into which a community should be passaged to follow a desired trajectory.</p>
+              <p>In this work, I have set out to interrogate the dependence of microbial interactions and growth rates (gLV parameters) on physical and molecular environmental gradients, and thereby, the dependence of community dynamics on the gradients as well. I aim to validate the research by designing an MPC that dictates what temperature and glucose concentration into which a community should be passaged to track a desired diversity.</p>
               <p>I originally proposed this work as a senior thesis to Adam, and it has since been funded by the UC Berkeley - CNR - SPUR independent research grant.</p>
             </td>
           </tr> 
@@ -121,20 +121,76 @@
                 dp_stop()
               </script>
             </td>
-            <td style="padding:20px;width:75%;vertical-align:top">
+            <td style="padding:20px;width:75%;vertical-align:middle">
               <heading>Drone Performance Optimization via a Genetic Algorithm</heading>
               <br> Improving control laws in-silico with a naive ML method
               <br>
-              <em> E150 Modeling Course Project</em>  
+              <em> E150 Modeling Course Project, Fall 2019</em>  
               <br>
               <a href="data/data_will/E150_P2_WAS_10052019.pdf">Report</a> /
-              <a href="data/data_will/P2_WAS_09232019.m">Matlab Script</a>
+              <a href="data/data_will/P2_WAS_09232019.m">Matlab Script</a> 
               <p></p>
               <p>In this project, I utilized a Genetic Algorithm, which breeds top scoring vectors of design parameters, to improve the performance of an autonomous drone swarm tasked with mapping targets and dodging obstacles. The design parameters include weights for exponential control laws for influencing the thrust vector of the drones based on proximity to targets, obstacles and other agents. The overall goal was to decrease R&D time and cost by advancing software prior to implementation. </p>
               <p>This was one of my favorite projects in college, and I think its a great demonstration of my modeling capabilities.</p>
             </td>
           </tr> 
           <!-- Drone Project -->
+
+          <!-- IMOL for GLV -->
+          <tr>
+            <td style="padding:20px;width:45%;vertical-align:top">
+              <div class="one">
+                <img src='images/images_will/ROC_thumb2.png' width="335">
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <heading>Radius of Convergence for gLV Systems</heading>
+              <br>
+              <em> Independent idea, Summer 2020</em>  
+              <br>
+              <a href="data/data_will/ROC_gLV_WAS06012020.pdf"> Derivation </a> / 
+              <a href="data/data_will/convergence_check.m"> Matlab Implementation </a>
+              <p></p>
+              <p> Last spring, I took an awesome, graduate course on nonlinear systems and control, and this was an attempt to extend some of the theory to my research. After some wiki-mathing, I decided to use the Hadamard operator to make the algebra more simple. In the end, I proved a bounds for the radius of convergence, which I implemented in matlab. </p>
+                
+              <p>Unfortunately, by this proof, the size of the region is heavily influenced by the Jacobian at a given microbial equilibrium, and in the real examples I have found, this matrix is small. Nonetheless, it sufficed to guarantee convergence of simulated trajectories my colleagues were troubled with. </p>
+            </td>
+          </tr> 
+          <!-- IMOL for GLV -->
+
+
+          <!-- Biolog Plate Reader -->
+          <tr onmouseout="blg_stop()" onmouseover="blg_start()">
+            <td style="padding:20px;width:45%;vertical-align:top"> <!--"padding:20px;width:25%;vertical-align:middle"-->
+              <div class="one">
+                <div class="two" id='blg_thumb'><img src='images/images_will/wt_imfindcircle.png' height="320" width="320"></div>
+                <img src='images/images_will/blg_thumb.png' height="320" width="320"> <!--width="320"-->
+              </div>
+              <script type="text/javascript">
+                function blg_start() {
+                  document.getElementById('blg_thumb').style.opacity = "1";
+                }
+
+                function blg_stop() {
+                  document.getElementById('blg_thumb').style.opacity = "0";
+                }
+                blg_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <heading>Phone-camera Plate Reader</heading>
+              <br>
+              <em> Independent idea, Fall 2019</em>  
+              <br>
+              <a href="data/data_will/BiologPlateReader.m"> Matlab script</a> /
+              <a href="images/images_will/WT_sorted_2.png"> Validation Figure </a> 
+              <p></p>
+              <p> I took a microbiology class once in which we had to score 8, 96-well biolog plates by hand. I took this as an opportunity to learn matlab's image processing toolbox. </p>
+                
+              <p> The written program takes in phone images, fixes the plane skew of the plate based on user defined corners, isolates the well, attributes the proper biolog label, and takes its average color in cieLAB. Finally, it clusters the found color values and assigns them a score, and returns a list and validation figure.</p>
+            </td>
+          </tr> 
+          <!-- Biolog Plate Reader -->
 
 <!-- Beginning of the JB Examples Boxes ---------------------------------->
 <!-- Beginning of the JB Examples Boxes ---------------------------------->
@@ -152,7 +208,7 @@
 
                 
                 <br>
-                Last updated November 12th, 2020.
+                Last updated November 17th, 2020.
               </p>
             </td>
           </tr>
