@@ -68,6 +68,62 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="stop_dor()" onmouseover="start_dor()">
+            <td style="padding:20px;width:25%;vertical-align:middle"> <!--"padding:20px;width:25%;vertical-align:middle"-->
+              <div class="one">
+                <div class="two" id='thumb_dor'><img src='images/images_will/DOHJ_PPO_f16_sq.jpg' height=100% width=100%></div>
+                <img src='images/images_will/DOHJ_PPO_f16_sq.jpg'height=100% width=100%>
+              </div>
+              <script type="text/javascript">
+                function start_dor() {
+                  document.getElementById('thumb_dor').style.opacity = "1";
+                }
+
+                function stop_dor() {
+                  document.getElementById('thumb_dor').style.opacity = "0";
+                }
+                stop_dor()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle> Dual Objective Reinforcement Learning with Novel HJB Forms </papertitle>
+              <br> 
+              <em> William Sharpless^*, Dylan Hirsch^*, Sander Tonkens, Nikhil Shinde, Sylvia Herbert. </em>  
+              <br>
+              Submitted - May, 2025
+              <p> In this recent submission, we derived novel HJB forms for dual-objective problems (multi-reward or reward & cost) and solve the corresponding Bellman eqns. We use these to design a novel on-policy algorithm (DO-HJ-PPO) which outerperforms STL-RL and CMDP (C-PPO) algorithms for a variety of safe-arrival and multi-achievment tasks. </p>
+              <p>[<a href='data/data_will/RAA_RR_DOHJPPO_rss_ws_060825.pdf'> RSS workshop paper</a>] (full paper will be available soon)</p>
+            </td>
+          </tr> 
+
+          <tr onmouseout="stop_rbn()" onmouseover="start_rbn()">
+            <td style="padding:20px;width:25%;vertical-align:middle"> <!--"padding:20px;width:25%;vertical-align:middle"-->
+              <div class="one">
+                <div class="two" id='thumb_rbn'><img src='images/images_will/frontpage5.png' height=100% width=100%></div>
+                <img src='images/images_will/frontpage5.jpg'height=100% width=100%>
+              </div>
+              <script type="text/javascript">
+                function start_rbn() {
+                  document.getElementById('thumb_rbn').style.opacity = "1";
+                }
+
+                function stop_rbn() {
+                  document.getElementById('thumb_rbn').style.opacity = "0";
+                }
+                stop_rbn()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle> Reachability Barrier Networks: Learning HJ for Smooth and Flexible CBFs </papertitle>
+              <br> 
+              <em> Matthew Kim, William Sharpless, Hyun Joe Jeong, Sander Tonkens, Somil Bansal, Sylvia Herbert. </em>  
+              <br>
+              Submitted to CoRL - April, 2025
+              <p> In this work, we explored learning smooth, tunable CBF's via the HJB PINN approach, dubbed Reachability Barrier Networks (RBNs). Due to the structure of the problem and uniqueness of the solution, we found RBNs to be more readily learned than neural CBFs, yielding safer appxs. with 5.5x less collisions in multi-agent scenario. </p>
+              <p>[<a href="https://arxiv.org/abs/2505.11755">paper</a>]</p>
+            </td>
+          </tr> 
+
           <tr onmouseout="stop_lss()" onmouseover="start_lss()">
             <td style="padding:20px;width:25%;vertical-align:middle"> <!--"padding:20px;width:25%;vertical-align:middle"-->
               <div class="one">
@@ -90,7 +146,7 @@
               <br> 
               <em> William Sharpless, Zeyuan Feng, Somil Bansal, Sylvia Herbert. </em>  
               <br>
-              Learning for Dynamics & Control (<strong>Nominated for Best Paper Award</strong>) - December, 2024
+              Learning for Dynamics & Control (<strong>Best Paper Nom.</strong>) - December, 2024
               <p>Here, we show that to learn a nonlinear HJ-PDE for autonomy, one may introduce the linear solution for ~25x increase in accuracy and ~20x acceleration in training for problems up to 50-dimensions.</p>
               <p>[<a href="data/data_will/L4DC_LS_HDR.pdf">paper</a>]</p>
             </td>
@@ -146,7 +202,7 @@
               <br> 
               <em> William Sharpless, Yat Tin Chow, Sylvia Herbert. </em>  
               <br>
-              Transactions on Automatic Control (In Review) - April, 2024
+              Transactions on Automatic Control - April, 2024
               <p>Here, we demonstrate how the error between a nonlinear system of interest and a linearization of it may transformed into an antagonistic player, yielding a conservative linear game that may be solved rapidly in high-dimensions.</p>
               <p>[<a href="https://arxiv.org/abs/2403.14184">paper</a>]</p>
             </td>
@@ -266,6 +322,15 @@
               <!-- <br>  -->
               <a href="https://github.com/UCSD-SASLab/HopfReachability">HopfReachability.jl</a>
               <p><em>Julia software for accelerated non-smooth, convex optimization of the Hopf objective for solving high-dimensional differential games.</em></p>
+            </td>
+          </tr> 
+
+          <tr>
+            <td style="padding:0.5%;width:63%;vertical-align:middle">
+              <!-- <papertitle> State-Augmented Linear Games with Antagonistic Error for High-Dimensional, Nonlinear Hamilton-Jacobi Reachability </papertitle> -->
+              <!-- <br>  -->
+              <a href="https://willsharpless.github.io/margo/?cx=0.0005999999999999339&cy=0&w=4.0012&h=4.0012&dt=0.0005&fo=0.999&dp=0.000125&cm=1">Margo</a>
+              <p><em>A fast, interactive level set solver for HJB flows made in GLSL.</em></p>
             </td>
           </tr> 
 
