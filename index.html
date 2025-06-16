@@ -124,19 +124,19 @@
                 [<a href="https://arxiv.org/abs/2505.11755">paper</a>]
                 [<a href="#" onclick="showVideo(); return false;">video</a>]
               </p>
-
               <div id="rbn_video_container" style="display:none; margin-top:10px;">
                 <video width="560" controls autoplay muted>
                   <source src="images/images_will/RBN_experiment_smaller.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-
               <script>
                 function showVideo() {
                   const vid = document.getElementById("rbn_video_container");
                   if (vid.style.display === "none") {
                     vid.style.display = "block";
+                  } else {
+                    vid.style.display = "none";
                   }
                 }
               </script>
