@@ -361,6 +361,27 @@
             </td>
           </tr> 
 
+          <tr>
+            <td style="padding:0.5%;width:63%;vertical-align:middle">
+              <a href="https://willsharpless.github.io/margo/?cx=0.0005999999999999339&cy=0&w=4.0012&h=4.0012&dt=0.0005&fo=0.999&dp=0.000125&cm=1">Margo</a>
+              [<a href="#" onclick="toggleMargoGifs(); return false;">demo</a>]
+              <p><em>A fast, interactive level set solver for HJB flows made in GLSL.</em></p>
+
+              <div id="margo_gif_container" style="display:none; margin-top:10px; display: flex; justify-content: space-between; gap: 1%;">
+                <img src="images/images_will/margo_gifs/boxeye_480_fast.gif" style="width:32%; border:1px solid #ccc;">
+                <img src="images/images_will/margo_gifs/swinging_axes_480_fast.gif" style="width:32%; border:1px solid #ccc;">
+                <img src="images/images_will/margo_gifs/magic_graffiti_480.gif" style="width:32%; border:1px solid #ccc;">
+              </div>
+
+              <script>
+                function toggleMargoGifs() {
+                  const container = document.getElementById("margo_gif_container");
+                  container.style.display = container.style.display === "none" ? "flex" : "none";
+                }
+              </script>
+            </td>
+          </tr>
+
 <!--End of Page-->
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
