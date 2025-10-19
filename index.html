@@ -41,15 +41,15 @@
               </p>
               <p style="text-align:center">
                 willsharpless [at] ucsd [dot] edu &nbsp/&nbsp
-                <a href="data/data_will/Will_Sharpless_CV_short_120824.pdf">CV</a> &nbsp/&nbsp
+                <a href="data/data_will/Will_Sharpless_CV_101925.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=xE-3uXgAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://github.com/willsharpless">Github</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/william-sharpless-b5202b126/">Linkedin</a>
               </p>
-              <p></p>
+              <!-- <p></p>
               <p>
                 <em>[Sep 2025 -- I am visiting Chuchu Fan's <a href="https://aeroastro.mit.edu/realm/">REALM</a> lab for the fall, would love to grab a coffee if you're in Boston]</em>
-              </p>
+              </p> -->
             </td> 
             <!-- <a href="index.html">Home</a> &emsp; <a href="research.html">Research</a>  &emsp;  <a href="coursework.html">Coursework</a> -->
 
@@ -58,6 +58,9 @@
             </td>
           </tr>
         </tbody></table>
+        <p>
+          <em>[Sep 2025 -- I am visiting Chuchu Fan's <a href="https://aeroastro.mit.edu/realm/">REALM</a> lab for the fall, would love to grab a coffee if you're in Boston]</em>
+        </p>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding-top:4%;padding-right:0;padding-bottom:2.5%;padding-left:0;width:100%;vertical-align:middle">
@@ -96,7 +99,8 @@
               <br>
               Recently Submitted - September, 2025
               <p> Here, we derive novel HJB forms for dual-objective problems (multi-reward or reward & cost) and solve the corresponding Bellman eqns. We use these to design a novel on-policy algorithm (DO-HJ-PPO) which outerperforms STL-RL and CMDP (C-PPO) algorithms for a variety of safe-arrival and multi-achievment tasks. </p>
-              <p>[<a href='data/data_will/RR_RAA_RL_092425.pdf'>paper</a>][<a href='https://arxiv.org/abs/2506.16016'>RSS '25 workshop</a>]</p>
+              <p>[<a href='data/data_will/RR_RAA_RL_092425.pdf'>paper</a>]
+                 [<a href='https://arxiv.org/abs/2506.16016'>RSS '25 workshop</a>]</p>
             </td>
           </tr> 
 
@@ -127,7 +131,7 @@
               <p>
                 [<a href="https://land-dev.github.io/madr/static/data/madr.pdf">paper</a>]
                 [<a href="https://land-dev.github.io/madr/">website</a>]
-                [<a href="#" onclick="showVideo(); return false;">video</a>]
+                [<a href="#" onclick="showVideoMADR(); return false;">video</a>]
               </p>
               <div id="madr_video_container" style="display:none; margin-top:10px;">
                 <video width="560" controls autoplay muted>
@@ -136,7 +140,7 @@
                 </video>
               </div>
               <script>
-                function showVideo() {
+                function showVideoMADR() {
                   const vid = document.getElementById("madr_video_container");
                   if (vid.style.display === "none") {
                     vid.style.display = "block";
@@ -174,7 +178,7 @@
               <p> In this work, we explore learning smooth, tunable CBF's via the HJB PINN approach, dubbed Reachability Barrier Networks (RBNs). Due to the structure of the problem and uniqueness of the solution, we found RBNs to be more readily learned than neural CBFs, yielding safer appxs. with 5.5x less collisions in a multi-agent experiment. </p>
               <p>
                 [<a href="https://arxiv.org/abs/2505.11755">paper</a>]
-                [<a href="#" onclick="showVideo(); return false;">video</a>]
+                [<a href="#" onclick="showVideoRBN(); return false;">video</a>]
               </p>
               <div id="rbn_video_container" style="display:none; margin-top:10px;">
                 <video width="560" controls autoplay muted>
@@ -183,7 +187,7 @@
                 </video>
               </div>
               <script>
-                function showVideo() {
+                function showVideoRBN() {
                   const vid = document.getElementById("rbn_video_container");
                   if (vid.style.display === "none") {
                     vid.style.display = "block";
