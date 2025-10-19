@@ -37,7 +37,7 @@
                 My work involves differential games (HJB-PDE's), control and learning, and my thesis concentrates on feasible methods for safe, high-dimensional autonomy. I am an HHMI/NIH Interfaces fellow, and I am also supported by the ONR and the Society of Hellman.
                 <br>
                 <br>
-                Before, I did my undergraduate degree in applied mathematics at UC Berkeley where I worked with Claire Tomlin, Adam Arkin and Jay Keasling.
+                Before, I did my undergraduate degree in applied math at UC Berkeley where I worked with Claire Tomlin, Adam Arkin and Jay Keasling.
               </p>
               <p style="text-align:center">
                 willsharpless [at] ucsd [dot] edu &nbsp/&nbsp
@@ -45,6 +45,10 @@
                 <a href="https://scholar.google.com/citations?user=xE-3uXgAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://github.com/willsharpless">Github</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/william-sharpless-b5202b126/">Linkedin</a>
+              </p>
+              <p></p>
+              <p>
+                <em>[Sep 2025 -- I am visiting Chuchu Fan's <a href="https://aeroastro.mit.edu/realm/">REALM</a> lab for the fall, would love to grab a coffee if you're in Boston]</em>
               </p>
             </td> 
             <!-- <a href="index.html">Home</a> &emsp; <a href="research.html">Research</a>  &emsp;  <a href="coursework.html">Coursework</a> -->
@@ -90,9 +94,57 @@
               <br> 
               <em> William Sharpless*, Dylan Hirsch*, Sander Tonkens, Nikhil Shinde, Sylvia Herbert. </em>  
               <br>
-              Recently Submitted - May, 2025
+              Recently Submitted - September, 2025
               <p> Here, we derive novel HJB forms for dual-objective problems (multi-reward or reward & cost) and solve the corresponding Bellman eqns. We use these to design a novel on-policy algorithm (DO-HJ-PPO) which outerperforms STL-RL and CMDP (C-PPO) algorithms for a variety of safe-arrival and multi-achievment tasks. </p>
-              <p>[<a href='https://arxiv.org/abs/2506.16016'>RSS workshop paper</a>] (full paper coming soon)</p>
+              <p>[<a href='data/data_will/RR_RAA_RL_092425.pdf'>paper</a>][<a href='https://arxiv.org/abs/2506.16016'>RSS '25 workshop</a>]</p>
+            </td>
+          </tr> 
+
+          <tr onmouseout="stop_madr()" onmouseover="start_madr()">
+            <td style="padding:20px;width:25%;vertical-align:middle"> <!--"padding:20px;width:25%;vertical-align:middle"-->
+              <div class="one">
+                <div class="two" id='thumb_madr'><img src='images/images_will/madr_drone_v_drone_square.gif' height=100% width=100%></div>
+                <img src='images/images_will/MADR_frontfig.png'height=100% width=100%>
+              </div>
+              <script type="text/javascript">
+                function start_madr() {
+                  document.getElementById('thumb_madr').style.opacity = "1";
+                }
+
+                function stop_madr() {
+                  document.getElementById('thumb_madr').style.opacity = "0";
+                }
+                stop_madr()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle> MADR: MPC-guided Adversarial DeepReach </papertitle>
+              <br> 
+              <em> Ryan Teoh, Sander Tonkens, William Sharpless, Aijia Yang, Zeyuan Feng, Somil Bansal, Sylvia Herbert. </em>  
+              <br>
+              Recently Submitted - September, 2025
+              <p> Here, we demonstrate that self-supervised learning of differential game HJ-PDE's, i.e. DeepReach, may be massively improved by active MPC-game supervision, where the opponents policy is defined by the current value approximation. We show that this algorithm is general to a myriad of platforms and robotic agents, namely turtlebots, drones and humanoids.</p>
+              <p>
+                [<a href="https://land-dev.github.io/madr/static/data/madr.pdf">paper</a>]
+                [<a href="https://land-dev.github.io/madr/">website</a>]
+                [<a href="#" onclick="showVideo(); return false;">video</a>]
+              </p>
+              <div id="madr_video_container" style="display:none; margin-top:10px;">
+                <video width="560" controls autoplay muted>
+                  <source src="images/images_will/madr_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <script>
+                function showVideo() {
+                  const vid = document.getElementById("madr_video_container");
+                  if (vid.style.display === "none") {
+                    vid.style.display = "block";
+                  } else {
+                    vid.style.display = "none";
+                  }
+                }
+              </script>
             </td>
           </tr> 
 
