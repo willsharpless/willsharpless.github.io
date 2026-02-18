@@ -75,6 +75,34 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="stop_vdp()" onmouseover="start_vdp()">
+            <td style="padding:20px;width:25%;vertical-align:middle"> <!--"padding:20px;width:25%;vertical-align:middle"-->
+              <div class="one">
+                <div class="two" id='thumb_vdp'><img src='images/images_will/valdec_hardware_pic.jpg' height=100% width=100%></div>
+                <img src='images/images_will/valdec_hardware_pic.jpg' height=100% width=100%>
+              </div>
+              <script type="text/javascript">
+                function start_vdp() {
+                  document.getElementById('thumb_vdp').style.opacity = "1";
+                }
+
+                function stop_vdp() {
+                  document.getElementById('thumb_vdp').style.opacity = "0";
+                }
+                stop_vdp()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle> Bellman Value Decomposition for Task Logic in Safe Optimal Control </papertitle>
+              <br> 
+              <em> William Sharpless*, Oswin So*, Dylan Hirsch, Sylvia Herbert, Chuchu Fan. </em>  
+              <br>
+              Recently submitted
+              <p> Here, we show that the optimal Bellman Value associated with a complex logical task may be decomposed into a graph of Bellman equations. From this perspective, we design a new algorithm for solving these tasks, named VDPPO. </p>
+              <p>[<a href='data/data_will/Value_Decomposition_021825.pdf'>paper</a>]
+            </td>
+          </tr> 
+
           <tr onmouseout="stop_dor()" onmouseover="start_dor()">
             <td style="padding:20px;width:25%;vertical-align:middle"> <!--"padding:20px;width:25%;vertical-align:middle"-->
               <div class="one">
