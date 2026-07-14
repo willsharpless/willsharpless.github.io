@@ -30,18 +30,29 @@
               </p>
               <p> Hello, 
               </p>
-              <p>
+              <p class="intro-first">
                 I am a Mechanical and Aerospace PhD candidate in Sylvia Herbert's <a href="https://www.sylviaherbert.com/">Safety and Autonomous Systems </a> group at UC San Diego.
-                <br>
-                <br>
-                My work involves value functions (HJB-PDE's), optimal control and learning, and my thesis concentrates on feasible methods for safe, high-dimensional autonomy. I am an HHMI/NIH Interfaces fellow, and I am also supported by the ONR and the Society of Hellman. 
-                <br>
-                <br>
-                In my PhD, I have been a visiting scholar in Chuchu Fan's <a href="https://aeroastro.mit.edu/realm/">REALM</a> lab (2025-'26) and Somil Bansal's <a href="https://smlbansal.github.io/sia-lab/index.html">SIA</a> lab (2024). This summer, I will be an intern at <a href="https://research.nvidia.com/labs/avg/">Nvidia's Autonomous Vehicles team</a>.
-                <br>
-                <br>
-                Before, I did my undergraduate degree in applied math at UC Berkeley where I worked with Claire Tomlin, Adam Arkin and Jay Keasling.
               </p>
+              <div class="intro-more" id="intro_more">
+                <p>
+                My work involves value functions (HJB-PDE's), optimal control and learning, and my thesis concentrates on feasible methods for safe, high-dimensional autonomy. I am an HHMI/NIH Interfaces fellow, and I am also supported by the ONR and the Society of Hellman. 
+                </p>
+                <p>
+                In my PhD, I have been a visiting scholar in Chuchu Fan's <a href="https://aeroastro.mit.edu/realm/">REALM</a> lab (2025-'26) and Somil Bansal's <a href="https://smlbansal.github.io/sia-lab/index.html">SIA</a> lab (2024). This summer, I will be an intern at <a href="https://research.nvidia.com/labs/avg/">Nvidia's Autonomous Vehicles team</a>.
+                </p>
+                <p>
+                Before, I did my undergraduate degree in applied math at UC Berkeley where I worked with Claire Tomlin, Adam Arkin and Jay Keasling.
+                </p>
+              </div>
+              <button class="intro-toggle" type="button" aria-expanded="false" aria-controls="intro_more" onclick="toggleIntro(this)">Read more</button>
+              <script>
+                function toggleIntro(button) {
+                  const intro = document.getElementById("intro_more");
+                  const isOpen = intro.classList.toggle("is-open");
+                  button.setAttribute("aria-expanded", isOpen);
+                  button.textContent = isOpen ? "Read less" : "Read more";
+                }
+              </script>
               <p style="text-align:center">
                 willsharpless [at] ucsd [dot] edu &nbsp/&nbsp
                 <a href="data/data_will/Will_Sharpless_CV_03232026.pdf">CV</a> &nbsp/&nbsp
