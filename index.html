@@ -547,6 +547,37 @@
       </td>
     </tr>
   </table>
+  <script>
+    document.querySelectorAll(".one").forEach((thumbnail) => {
+      const tabs = document.createElement("div");
+      tabs.className = "thumb-tabs";
+
+      ["Base image", "Preview image"].forEach((label, index) => {
+        const tab = document.createElement("button");
+        tab.className = "thumb-tab";
+        tab.type = "button";
+        tab.setAttribute("aria-label", label);
+        tab.setAttribute("aria-pressed", index === 0 ? "true" : "false");
+        if (index === 0) {
+          tab.classList.add("is-active");
+        }
+
+        tab.addEventListener("click", () => {
+          const showPreview = index === 1;
+          thumbnail.classList.toggle("is-previewing", showPreview);
+          tabs.querySelectorAll(".thumb-tab").forEach((item, itemIndex) => {
+            const isActive = itemIndex === index;
+            item.classList.toggle("is-active", isActive);
+            item.setAttribute("aria-pressed", isActive ? "true" : "false");
+          });
+        });
+
+        tabs.appendChild(tab);
+      });
+
+      thumbnail.appendChild(tabs);
+    });
+  </script>
 </body>
 
 </html>

@@ -161,6 +161,10 @@ span.highlight {
   display: none;
 }
 
+.thumb-tabs {
+  display: none;
+}
+
 @media (max-width: 640px) {
   html {
     -webkit-text-size-adjust: 100%;
@@ -299,9 +303,56 @@ span.highlight {
     margin: 0 auto;
   }
 
+  .one {
+    overflow: visible;
+  }
+
+  .one .two {
+    opacity: 0 !important;
+  }
+
+  .one.is-previewing .two {
+    opacity: 1 !important;
+  }
+
   .one img,
   .two img {
     object-fit: cover;
+  }
+
+  .thumb-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: absolute;
+    top: 50%;
+    right: -26px;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+
+  .thumb-tab {
+    width: 20px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(246, 248, 251, 0.86));
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .thumb-tab.is-active {
+    background: linear-gradient(135deg, #ffffff, #edf5ff);
+    border-color: rgba(23, 114, 208, 0.55);
+    box-shadow: 0 4px 11px rgba(23, 114, 208, 0.22), inset 0 0 0 4px rgba(23, 114, 208, 0.16);
+  }
+
+  .thumb-tab:focus-visible {
+    outline: 2px solid #f09228;
+    outline-offset: 2px;
   }
 
   papertitle {
