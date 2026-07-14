@@ -104,7 +104,7 @@
               <br> 
               <em> William Sharpless*, Oswin So*, Dylan Hirsch, Sylvia Herbert, Chuchu Fan. </em>  
               <br>
-              RSS - 2026
+              <span class="venue">RSS 2026</span>
               <p> Here, we show that the optimal Bellman Value associated with a complex logical task may be decomposed into a graph of Bellman equations. From this perspective, we design a new algorithm for solving these tasks, named VDPPO. </p>
               <p>
                 [<a href="https://willsharpless.github.io/valdec-site/">site</a>]
@@ -134,7 +134,7 @@
               <br> 
               <em> William Sharpless*, Dylan Hirsch*, Sander Tonkens, Nikhil Shinde, Sylvia Herbert. </em>  
               <br>
-              ICLR - 2026, IASEAI - 2026
+              <span class="venue">ICLR 2026, IASEAI 2026</span>
               <p> Here, we derive novel HJB forms for dual-objective problems (multi-reward or reward & cost) and solve the corresponding Bellman eqns. We use these to design a novel on-policy algorithm (DO-HJ-PPO) which outerperforms STL-RL and CMDP (C-PPO) algorithms for a variety of safe-arrival and multi-achievment tasks. </p>
               <p>
                 [<a href="https://willsharpless.github.io/rraa-site/">site</a>]
@@ -165,7 +165,7 @@
               <br> 
               <em> Ryan Teoh, Sander Tonkens, William Sharpless, Aijia Yang, Zeyuan Feng, Somil Bansal, Sylvia Herbert. </em>  
               <br>
-              ICRA - 2026
+              <span class="venue">ICRA 2026</span>
               <p> Here, we demonstrate that self-supervised learning of differential game HJ-PDE's, i.e. DeepReach, may be massively improved by active MPC-game supervision, where the opponents policy is defined by the current value approximation. We show that this algorithm is general to a myriad of platforms and robotic agents, namely turtlebots, drones and humanoids.</p>
               <p>
                 [<a href="https://land-dev.github.io/madr/">site</a>]
@@ -213,7 +213,7 @@
               <br> 
               <em> Matthew Kim, William Sharpless, Hyun Joe Jeong, Sander Tonkens, Somil Bansal, Sylvia Herbert. </em>  
               <br>
-              Recently Submitted - April, 2025
+              <span class="venue">Arxiv 2025</span>
               <p> In this work, we explore learning smooth, tunable CBF's via the HJB PINN approach, dubbed Reachability Barrier Networks (RBNs). Due to the structure of the problem and uniqueness of the solution, we found RBNs to be more readily learned than neural CBFs, yielding safer appxs. with 5.5x less collisions in a multi-agent experiment. </p>
               <p>
                 [<a href="https://arxiv.org/abs/2505.11755">paper</a>]
@@ -256,11 +256,11 @@
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <papertitle> Linear Supervision for Nonlinear, High-Dimensional Neural Control and Differential Games (<strong>Best Paper Nom.</strong>) </papertitle>
+              <papertitle> Linear Supervision for Nonlinear, High-Dimensional Neural Control and Differential Games <span class="award">★ Best Paper Nom.</span> </papertitle>
               <br> 
               <em> William Sharpless, Zeyuan Feng, Somil Bansal, Sylvia Herbert. </em>  
               <br>
-              L4DC - December, 2024
+              <span class="venue">L4DC 2025</span>
               <p>Here, we show that to learn a nonlinear HJ-PDE for autonomy, one may introduce the linear solution for ~25x increase in accuracy and ~20x acceleration in training for problems up to 50-dimensions.</p>
               <p>[<a href="data/data_will/L4DC_LS_HDR.pdf">paper</a>]</p>
             </td>
@@ -288,7 +288,7 @@
               <br> 
               <em> William Sharpless, Yat Tin Chow, Sylvia Herbert. </em>  
               <br>
-              CDC - March, 2024
+              <span class="venue">CDC 2024</span>
               <p>Here, we propose a novel, lifted differential game that is guaranteed to be conservative, is solved rapidly, and allows the use of lifting functions such as neural nets, polynomials and radial basis functions to reduce linear error.</p>
               <p>[<a href="https://arxiv.org/abs/2403.16982">paper</a>]</p>
             </td>
@@ -316,7 +316,7 @@
               <br> 
               <em> William Sharpless, Yat Tin Chow, Sylvia Herbert. </em>  
               <br>
-              TAC - April, 2024
+              <span class="venue">TAC 2024</span>
               <p>Here, we demonstrate how the error between a nonlinear system of interest and a linearization of it may transformed into an antagonistic player, yielding a conservative linear game that may be solved rapidly in high-dimensions.</p>
               <p>[<a href="https://arxiv.org/abs/2403.14184">paper</a>]</p>
             </td>
@@ -344,7 +344,7 @@
               <br> 
               <em> William Sharpless, Nikhil Shinde, Matthew Kim, Yat Tin Chow, Sylvia Herbert. </em>  
               <br>
-              Arxiv (In Review) - November, 2023
+              <span class="venue">Arxiv 2023</span>
               <p>In this work, we propose and demonstrate the use of Koopman linearizations to allow the use of the Hopf formula for linear differential games to yield a performant algorithm for high-dimensional, nonlinear autonomy.</p>
               <p>[<a href="https://arxiv.org/abs/2303.11590">paper</a>]</p> 
             </td>
@@ -547,7 +547,39 @@
       </td>
     </tr>
   </table>
+  <div class="lightbox" id="image_lightbox" aria-hidden="true" aria-modal="true" role="dialog" aria-label="Expanded image">
+    <button class="lightbox-close" type="button" aria-label="Close expanded image">Close</button>
+    <img alt="">
+  </div>
   <script>
+    const lightbox = document.getElementById("image_lightbox");
+    const lightboxImage = lightbox.querySelector("img");
+
+    function openLightbox(src, alt) {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || "";
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImage.removeAttribute("src");
+    }
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox || event.target.classList.contains("lightbox-close")) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    });
+
     document.querySelectorAll(".one").forEach((thumbnail) => {
       const tabs = document.createElement("div");
       tabs.className = "thumb-tabs";
@@ -562,7 +594,8 @@
           tab.classList.add("is-active");
         }
 
-        tab.addEventListener("click", () => {
+        tab.addEventListener("click", (event) => {
+          event.stopPropagation();
           const showPreview = index === 1;
           thumbnail.classList.toggle("is-previewing", showPreview);
           tabs.querySelectorAll(".thumb-tab").forEach((item, itemIndex) => {
@@ -576,6 +609,47 @@
       });
 
       thumbnail.appendChild(tabs);
+      thumbnail.setAttribute("role", "button");
+      thumbnail.setAttribute("tabindex", "0");
+      thumbnail.setAttribute("aria-label", "Expand publication image");
+
+      thumbnail.addEventListener("click", () => {
+        const baseImage = Array.from(thumbnail.children).find((child) => child.tagName === "IMG");
+        const activeImage = thumbnail.classList.contains("is-previewing")
+          ? thumbnail.querySelector(".two img")
+          : baseImage;
+        openLightbox(activeImage.src, activeImage.alt);
+      });
+
+      thumbnail.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          thumbnail.click();
+        }
+      });
+    });
+
+    document.querySelectorAll("a[href] > img").forEach((image) => {
+      const link = image.closest("a");
+      if (!/\.(avif|gif|jpe?g|png|webp)$/i.test(link.getAttribute("href"))) {
+        return;
+      }
+
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        openLightbox(link.href, image.alt);
+      });
+    });
+
+    document.querySelectorAll("img").forEach((image) => {
+      if (image.closest(".one, a, .lightbox")) {
+        return;
+      }
+
+      image.classList.add("lightbox-trigger");
+      image.addEventListener("click", () => {
+        openLightbox(image.src, image.alt);
+      });
     });
   </script>
 </body>
